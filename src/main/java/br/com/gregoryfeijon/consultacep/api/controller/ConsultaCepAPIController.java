@@ -7,9 +7,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
 
+import br.com.gregoryfeijon.consultacep.annotation.RestAPIController;
 import br.com.gregoryfeijon.consultacep.api.response.Response;
 import br.com.gregoryfeijon.consultacep.model.Endereco;
 import br.com.gregoryfeijon.consultacep.service.ConsultaCepService;
@@ -23,8 +22,7 @@ import br.com.gregoryfeijon.consultacep.util.LoggerUtil;
  * @author gregory.feijon
  */
 
-@RestController
-@RequestMapping("/api/consulta-cep")
+@RestAPIController("consulta-cep")
 @CrossOrigin(origins = "*")
 public class ConsultaCepAPIController {
 
@@ -44,7 +42,7 @@ public class ConsultaCepAPIController {
 		LOG.info("Consulta do endereço referente ao CEP: {0}", endereco.getCep());
 		return executaConsulta(endereco.getCep());
 	}
-	
+
 	private ResponseEntity<Response<Endereco>> executaConsulta(String cep) {
 		if (CepUtil.validaCep(cep)) {
 			Endereco endereco = consultaCepService.buscaEnderecoPorCep(cep);

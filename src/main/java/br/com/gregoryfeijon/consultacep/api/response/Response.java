@@ -1,6 +1,5 @@
 package br.com.gregoryfeijon.consultacep.api.response;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import lombok.Data;
@@ -15,5 +14,5 @@ import lombok.Data;
 public class Response<T> {
 
 	private T data;
-	private List<String> errors = new ArrayList<>();
+	private List<String> errors;
 }

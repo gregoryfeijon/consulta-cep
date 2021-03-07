@@ -20,6 +20,13 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 @EnableWebSecurity
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
+	private static final String[] AUTHORIZED_PATHS = {
+			// api exposta
+			"/api/**",
+
+			// -- swagger ui
+			"/swagger-resources/**", "/swagger-ui.html", "/v2/api-docs", "/webjars/**" };
+
 	@Autowired
 	private JwtAuthenticationEntryPoint unauthorizedHandler;
 
@@ -30,7 +37,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
-		http.cors().and().csrf().disable().authorizeRequests().antMatchers("/api/**").permitAll().and()
+		http.cors().and().csrf().disable().authorizeRequests().antMatchers(AUTHORIZED_PATHS).permitAll().and()
 				.exceptionHandling().authenticationEntryPoint(unauthorizedHandler);
 		http.addFilterBefore(authenticationTokenFilterBean(), UsernamePasswordAuthenticationFilter.class);
 	}
