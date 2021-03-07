@@ -18,7 +18,7 @@ import br.com.gregoryfeijon.consultacep.util.LoggerUtil;
  */
 
 @RestController
-public class ViaCepConsumer extends APICliente<ViaCepDTO> implements CepConsumer<ViaCepDTO> {
+public class ViaCepConsumer extends BuscaCepAPICliente<ViaCepDTO> {
 
 	private static final LoggerUtil LOG = LoggerUtil.getLog(ViaCepConsumer.class);
 
@@ -34,6 +34,9 @@ public class ViaCepConsumer extends APICliente<ViaCepDTO> implements CepConsumer
 		if (response.getStatusCodeValue() == 200) {
 			ViaCepDTO viaCepDTO = response.getBody();
 			LOG.info("Informações obtidas do CEP {0}: {1}", cep, viaCepDTO);
+			if (viaCepDTO.isErro()) {
+				return Optional.empty();
+			}
 			return Optional.of(viaCepDTO);
 		}
 		return Optional.empty();

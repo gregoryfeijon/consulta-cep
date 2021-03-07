@@ -4,14 +4,15 @@ import lombok.Getter;
 import lombok.Setter;
 
 /**
- * 04/03/2021 às 23:23:50
+ * 06/03/2021 às 20:49:10
  * 
  * @author gregory.feijon
  */
 
 @Getter
 @Setter
-public class ViaCepProperties extends CepProperties {
+public abstract class CepProperties {
 
-	private String apiReturnType;
+	private String initialPath;
+	private boolean buscaEndereco;
 }

@@ -1,8 +1,10 @@
 package br.com.gregoryfeijon.consultacep.model;
 
-import com.fasterxml.jackson.annotation.JsonAlias;
+import java.io.Serializable;
+
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
+import br.com.gregoryfeijon.consultacep.dto.ViaCepDTO;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -15,22 +17,24 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class Endereco {
-
+public class Endereco implements Serializable {
+	
+	private static final long serialVersionUID = -6087941180681233737L;
+	
 	private String cep;
-
-	@JsonAlias("logradouro")
 	private String rua;
-
 	private String bairro;
-
-	@JsonAlias("localidade")
 	private String cidade;
-
-	@JsonAlias("uf")
 	private String estado;
 
 	public Endereco(String cep) {
 		this.cep = cep;
+	}
+	
+	public Endereco(ViaCepDTO viaCepDTO) {
+		this.rua = viaCepDTO.getLogradouro();
+		this.bairro = viaCepDTO.getBairro();
+		this.cidade = viaCepDTO.getLocalidade();
+		this.estado = viaCepDTO.getUf();
 	}
 }
