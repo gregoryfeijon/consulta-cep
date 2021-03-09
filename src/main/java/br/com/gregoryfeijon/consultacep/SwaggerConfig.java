@@ -18,7 +18,7 @@ import springfox.documentation.spring.web.plugins.Docket;
 public class SwaggerConfig {
 
 	@Bean
-	public Docket a() {
+	public Docket consultaCepAPI() {
 		return new Docket(DocumentationType.SWAGGER_2).select().apis(RequestHandlerSelectors.any())
 				.paths(PathSelectors.any()).build();
 	}
