@@ -21,6 +21,12 @@ public class ConsultaCepService {
 	@Autowired
 	private CepConsumer cepConsumer;
 
+	/**
+	 * Método para realizar buscas de endereço a partir de um CEP.
+	 * 
+	 * @param cep - {@linkplain String}
+	 * @return {@linkplain Endereco}
+	 */
 	public Endereco buscaEnderecoPorCep(String cep) {
 		Endereco endereco = null;
 		cep = StringUtil.somenteNumeros(cep);
@@ -32,6 +38,13 @@ public class ConsultaCepService {
 		return endereco;
 	}
 
+	/**
+	 * Método que orquestra a busca por CEP, manipulando-o até obter um retorno, ou
+	 * até alterar todos os caracteres e não obtem nenhum endereço.
+	 * 
+	 * @param cep - {@linkplain String}
+	 * @return {@linkplain Optional}&lt{@linkplain Endereco}&gt
+	 */
 	private Optional<Endereco> buscaEndereco(String cep) {
 		String cepAux = new String(cep);
 		Optional<Endereco> opRetorno = Optional.empty();

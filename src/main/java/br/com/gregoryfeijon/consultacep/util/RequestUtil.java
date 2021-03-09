@@ -14,6 +14,11 @@ import br.com.gregoryfeijon.consultacep.api.response.Response;
 /**
  * 04/03/2021 às 22:32:48
  * 
+ * <p>
+ * Classe com implementações prontas de requisições para API com
+ * {@linkplain RestTemplate restTemplate}
+ * <p>
+ * 
  * @author gregory.feijon
  */
 
@@ -23,6 +28,14 @@ public class RequestUtil<T> {
 	@Autowired
 	private RestTemplate restTemplate;
 
+	/**
+	 * Método que executa requisição para a URL especificada, obtendo um objeto do
+	 * tipo passado no argumento clazz.
+	 * 
+	 * @param uri   - {@linkplain Strin}
+	 * @param clazz {@linkplain Class}&ltT&gt
+	 * @return {@linkplain ResponseEntity}&ltT&gt
+	 */
 	public ResponseEntity<T> getEntity(String uri, Class<T> clazz) {
 		return restTemplate.getForEntity(uri, clazz);
 	}

@@ -22,6 +22,8 @@ public class ViaCepConsumer extends BuscaCepAPICliente<ViaCepDTO> {
 
 	private static final LoggerUtil LOG = LoggerUtil.getLog(ViaCepConsumer.class);
 
+	private String apiReturnType;
+	
 	public ViaCepConsumer(ViaCepProperties properties) {
 		this.initialPath = properties.getInitialPath();
 		this.apiReturnType = properties.getApiReturnType();

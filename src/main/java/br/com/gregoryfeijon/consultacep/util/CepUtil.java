@@ -1,5 +1,15 @@
 package br.com.gregoryfeijon.consultacep.util;
 
+/**
+ * 06/03/2021 às 18:49:10
+ * 
+ * <p>
+ * Classe com métodos úteis para manipulação do CEP a ser consultado.
+ * <p>
+ * 
+ * @author gregory.feijon
+ *
+ */
 public final class CepUtil {
 
 	private CepUtil() {}

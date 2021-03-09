@@ -7,6 +7,7 @@ import springfox.documentation.builders.PathSelectors;
 import springfox.documentation.builders.RequestHandlerSelectors;
 import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.Docket;
+import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 /**
  * 07/03/2021 às 16:52:21
@@ -15,6 +16,7 @@ import springfox.documentation.spring.web.plugins.Docket;
  */
 
 @Configuration
+@EnableSwagger2
 public class SwaggerConfig {
 
 	@Bean

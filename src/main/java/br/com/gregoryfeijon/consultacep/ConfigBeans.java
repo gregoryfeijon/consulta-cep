@@ -24,6 +24,14 @@ public class ConfigBeans {
 	@Autowired
 	private RestTemplateResponseErrorHandler errorHandler;
 
+	/**
+	 * Bean de configuração do RestTemplate, para definir a forma que os erros serão
+	 * tratados, bem como modificar o RequestFactory, para poder trabalhar de forma
+	 * mais livre com a ResponseEntity.
+	 * 
+	 * @param builder - {@linkplain RestTemplateBuilder}
+	 * @return {@linkplain RestTemplate}
+	 */
 	@Bean
 	public RestTemplate restTemplate(RestTemplateBuilder builder) {
 		RestTemplate restTemplate = builder.errorHandler(errorHandler).build();
@@ -31,6 +39,12 @@ public class ConfigBeans {
 		return restTemplate;
 	}
 
+	/**
+	 * {@linkplain Bean} de properties criado, para tornar a injeção de propriedades
+	 * mais limpa e agrupada por uso.
+	 * 
+	 * @return {@linkplain ViaCepProperties}
+	 */
 	@Bean
 	@ConfigurationProperties(prefix = "via-cep")
 	public ViaCepProperties viaCepProperties() {
