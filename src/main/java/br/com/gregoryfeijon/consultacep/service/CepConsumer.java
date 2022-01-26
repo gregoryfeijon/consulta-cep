@@ -1,12 +1,11 @@
 package br.com.gregoryfeijon.consultacep.service;
 
-import java.util.Optional;
-
+import br.com.gregoryfeijon.consultacep.model.Endereco;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
-import br.com.gregoryfeijon.consultacep.model.Endereco;
+import java.util.Optional;
 
 @Component
 public class CepConsumer {

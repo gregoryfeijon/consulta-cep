@@ -1,8 +1,8 @@
 package br.com.gregoryfeijon.consultacep.api.response;
 
-import java.util.List;
-
 import lombok.Data;
+
+import java.util.List;
 
 /**
  * 04/03/2021 às 22:01:19

@@ -1,15 +1,14 @@
 package br.com.gregoryfeijon.consultacep.service;
 
-import java.util.Optional;
-
-import org.springframework.core.ParameterizedTypeReference;
-import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.RestController;
-
 import br.com.gregoryfeijon.consultacep.api.response.Response;
 import br.com.gregoryfeijon.consultacep.dto.ViaCepDTO;
 import br.com.gregoryfeijon.consultacep.properties.ViaCepProperties;
 import br.com.gregoryfeijon.consultacep.util.LoggerUtil;
+import org.springframework.core.ParameterizedTypeReference;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.RestController;
+
+import java.util.Optional;
 
 /**
  * 04/03/2021 às 22:49:10

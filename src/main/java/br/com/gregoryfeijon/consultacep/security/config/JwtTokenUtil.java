@@ -1,21 +1,19 @@
 package br.com.gregoryfeijon.consultacep.security.config;
 
+import br.com.gregoryfeijon.consultacep.security.properties.JwtProperties;
+import io.jsonwebtoken.Claims;
+import io.jsonwebtoken.Jwts;
+import io.jsonwebtoken.SignatureAlgorithm;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.stereotype.Component;
+
+import javax.crypto.spec.SecretKeySpec;
 import java.io.Serializable;
 import java.security.Key;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.util.Date;
 import java.util.function.Function;
-
-import javax.crypto.spec.SecretKeySpec;
-
-import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.stereotype.Component;
-
-import br.com.gregoryfeijon.consultacep.security.properties.JwtProperties;
-import io.jsonwebtoken.Claims;
-import io.jsonwebtoken.Jwts;
-import io.jsonwebtoken.SignatureAlgorithm;
 
 /**
  * 06/03/2021 às 22:07:02

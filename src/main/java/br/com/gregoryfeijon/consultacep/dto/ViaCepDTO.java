@@ -1,7 +1,6 @@
 package br.com.gregoryfeijon.consultacep.dto;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-
 import lombok.Data;
 
 /**

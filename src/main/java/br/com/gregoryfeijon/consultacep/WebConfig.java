@@ -1,11 +1,10 @@
 package br.com.gregoryfeijon.consultacep;
 
+import br.com.gregoryfeijon.consultacep.annotation.RestAPIController;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.method.HandlerTypePredicate;
 import org.springframework.web.servlet.config.annotation.PathMatchConfigurer;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
-
-import br.com.gregoryfeijon.consultacep.annotation.RestAPIController;
 
 /**
  * 07/03/2021 às 15:22:27

@@ -1,5 +1,6 @@
 package br.com.gregoryfeijon.consultacep.util;
 
+import br.com.gregoryfeijon.consultacep.api.response.Response;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.HttpEntity;
@@ -8,8 +9,6 @@ import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
-
-import br.com.gregoryfeijon.consultacep.api.response.Response;
 
 /**
  * 04/03/2021 às 22:32:48
@@ -32,7 +31,7 @@ public class RequestUtil<T> {
 	 * Método que executa requisição para a URL especificada, obtendo um objeto do
 	 * tipo passado no argumento clazz.
 	 * 
-	 * @param uri   - {@linkplain Strin}
+	 * @param uri   - {@linkplain String}
 	 * @param clazz {@linkplain Class}&ltT&gt
 	 * @return {@linkplain ResponseEntity}&ltT&gt
 	 */

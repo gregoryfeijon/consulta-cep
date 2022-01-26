@@ -1,12 +1,11 @@
 package br.com.gregoryfeijon.consultacep.model;
 
-import java.io.Serializable;
-
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-
 import br.com.gregoryfeijon.consultacep.dto.ViaCepDTO;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
+import java.io.Serializable;
 
 /**
  * 04/03/2021 às 21:59:23

@@ -1,10 +1,10 @@
 package br.com.gregoryfeijon.consultacep.util;
 
-import java.util.Arrays;
-import java.util.List;
-
 import br.com.gregoryfeijon.consultacep.api.response.Response;
 import br.com.gregoryfeijon.consultacep.exception.APIException;
+
+import java.util.Arrays;
+import java.util.List;
 
 /**
  * 06/03/2021 às 21:12:54

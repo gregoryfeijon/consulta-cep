@@ -1,13 +1,12 @@
 package br.com.gregoryfeijon.consultacep.service;
 
-import java.util.Optional;
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-
 import br.com.gregoryfeijon.consultacep.model.Endereco;
 import br.com.gregoryfeijon.consultacep.util.CepUtil;
 import br.com.gregoryfeijon.consultacep.util.StringUtil;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import java.util.Optional;
 
 /**
  * 04/03/2021 às 22:03:27

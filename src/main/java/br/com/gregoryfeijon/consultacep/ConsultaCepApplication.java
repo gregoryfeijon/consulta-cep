@@ -1,15 +1,14 @@
 package br.com.gregoryfeijon.consultacep;
 
-import java.time.ZoneId;
-import java.time.ZoneOffset;
-import java.util.TimeZone;
-
-import javax.annotation.PostConstruct;
-
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Configuration;
+
+import javax.annotation.PostConstruct;
+import java.time.ZoneId;
+import java.time.ZoneOffset;
+import java.util.TimeZone;
 
 @SpringBootApplication
 @Configuration

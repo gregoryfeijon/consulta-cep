@@ -1,13 +1,5 @@
 package br.com.gregoryfeijon.consultacep.api.controller;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-
 import br.com.gregoryfeijon.consultacep.annotation.RestAPIController;
 import br.com.gregoryfeijon.consultacep.api.response.Response;
 import br.com.gregoryfeijon.consultacep.model.Endereco;
@@ -15,6 +7,9 @@ import br.com.gregoryfeijon.consultacep.service.ConsultaCepService;
 import br.com.gregoryfeijon.consultacep.util.ApiUtil;
 import br.com.gregoryfeijon.consultacep.util.CepUtil;
 import br.com.gregoryfeijon.consultacep.util.LoggerUtil;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * 04/03/2021 às 22:04:43

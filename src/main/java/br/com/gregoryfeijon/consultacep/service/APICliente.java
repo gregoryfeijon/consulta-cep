@@ -1,10 +1,9 @@
 package br.com.gregoryfeijon.consultacep.service;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.core.ParameterizedTypeReference;
-
 import br.com.gregoryfeijon.consultacep.api.response.Response;
 import br.com.gregoryfeijon.consultacep.util.RequestUtil;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.ParameterizedTypeReference;
 
 /**
  * 04/03/2021 às 22:47:51

@@ -1,8 +1,8 @@
 package br.com.gregoryfeijon.consultacep.security.config;
 
-import java.nio.file.AccessDeniedException;
-import java.util.List;
-
+import br.com.gregoryfeijon.consultacep.api.response.Response;
+import br.com.gregoryfeijon.consultacep.exception.APIException;
+import br.com.gregoryfeijon.consultacep.util.ApiUtil;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -13,9 +13,8 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
 
-import br.com.gregoryfeijon.consultacep.api.response.Response;
-import br.com.gregoryfeijon.consultacep.exception.APIException;
-import br.com.gregoryfeijon.consultacep.util.ApiUtil;
+import java.nio.file.AccessDeniedException;
+import java.util.List;
 
 /**
  * 06/03/2021 às 22:06:27
