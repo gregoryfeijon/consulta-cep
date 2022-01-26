@@ -1,10 +1,8 @@
 package br.com.gregoryfeijon.consultacep.service;
 
-import static org.junit.jupiter.api.Assertions.assertNull;
-import static org.mockito.Mockito.doReturn;
-
-import java.util.Optional;
-
+import br.com.gregoryfeijon.consultacep.ConsultaCepTestHelper;
+import br.com.gregoryfeijon.consultacep.model.Endereco;
+import br.com.gregoryfeijon.consultacep.util.StringUtil;
 import org.junit.jupiter.api.MethodOrderer.OrderAnnotation;
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
@@ -14,9 +12,10 @@ import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;
 
-import br.com.gregoryfeijon.consultacep.ConsultaCepTestHelper;
-import br.com.gregoryfeijon.consultacep.model.Endereco;
-import br.com.gregoryfeijon.consultacep.util.StringUtil;
+import java.util.Optional;
+
+import static org.junit.jupiter.api.Assertions.assertNull;
+import static org.mockito.Mockito.doReturn;
 
 /**
  * 06/03/2021 às 20:49:10

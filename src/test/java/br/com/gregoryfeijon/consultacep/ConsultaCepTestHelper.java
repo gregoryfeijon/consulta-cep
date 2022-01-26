@@ -1,14 +1,13 @@
 package br.com.gregoryfeijon.consultacep;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-
-import org.mockito.InjectMocks;
-import org.mockito.Mock;
-
 import br.com.gregoryfeijon.consultacep.model.Endereco;
 import br.com.gregoryfeijon.consultacep.model.EnderecoBuilder;
 import br.com.gregoryfeijon.consultacep.service.CepConsumer;
 import br.com.gregoryfeijon.consultacep.service.ConsultaCepService;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
  * 07/03/2021 às 22:07:30

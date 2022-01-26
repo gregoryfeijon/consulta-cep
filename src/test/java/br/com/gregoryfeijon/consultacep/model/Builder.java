@@ -1,5 +1,8 @@
 package br.com.gregoryfeijon.consultacep.model;
 
+import br.com.gregoryfeijon.consultacep.util.LoggerUtil;
+import org.objenesis.instantiator.util.ClassUtils;
+
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
@@ -9,10 +12,6 @@ import java.util.List;
 import java.util.Optional;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
-
-import org.objenesis.instantiator.util.ClassUtils;
-
-import br.com.gregoryfeijon.consultacep.util.LoggerUtil;
 
 /**
  * 07/03/2021 às 18:39:32

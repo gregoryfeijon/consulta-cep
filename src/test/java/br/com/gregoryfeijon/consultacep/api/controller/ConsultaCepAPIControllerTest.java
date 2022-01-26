@@ -1,11 +1,9 @@
 package br.com.gregoryfeijon.consultacep.api.controller;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
-import static org.mockito.Mockito.when;
-
-import java.util.Arrays;
-
+import br.com.gregoryfeijon.consultacep.ConsultaCepTestHelper;
+import br.com.gregoryfeijon.consultacep.api.response.Response;
+import br.com.gregoryfeijon.consultacep.model.Endereco;
+import br.com.gregoryfeijon.consultacep.model.EnderecoBuilder;
 import org.junit.jupiter.api.MethodOrderer.OrderAnnotation;
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
@@ -22,10 +20,11 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.web.client.RestTemplate;
 
-import br.com.gregoryfeijon.consultacep.ConsultaCepTestHelper;
-import br.com.gregoryfeijon.consultacep.api.response.Response;
-import br.com.gregoryfeijon.consultacep.model.Endereco;
-import br.com.gregoryfeijon.consultacep.model.EnderecoBuilder;
+import java.util.Arrays;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.mockito.Mockito.when;
 
 /**
  * 06/03/2021 às 20:49:10
